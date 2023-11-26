@@ -7,6 +7,7 @@ const { dbConnection } = require("./models/db");
 const { UserRoutes } = require("./routes/user.routes");
 const { Project } = require("./routes/project.routes");
 const { contactMe } = require("./routes/contactMe.route");
+const { Resume } = require("./routes/resume.routes");
 dotenv.config()
 const port=process.env.PORT || 3000
 const app=express()
@@ -17,6 +18,7 @@ app.use(cors());
 app.use("/", UserRoutes);
 app.use("/",Project)
 app.use("/",contactMe)
+app.use("/",Resume)
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(swaggerFile, false, {
     docExpansion: "none"
 }))
