@@ -1,5 +1,5 @@
 //user managment APIs
-const { User } = require('../models/User.model');
+const { User } = require('../models/user.model');
 const jwt =require("jsonwebtoken");
 //create user
 exports.createUser = async (req, res, next) => {
