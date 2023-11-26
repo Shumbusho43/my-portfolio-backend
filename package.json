@@ -1,0 +1,34 @@
+{
+  "name": "my-portfolio-backend",
+  "version": "1.0.0",
+  "description": "My portfolio backend",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app.js",
+    "swagger-autogen": "node swagger.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shumbusho43/my-portfolio-backend.git"
+  },
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shumbusho43/my-portfolio-backend/issues"
+  },
+  "homepage": "https://github.com/Shumbusho43/my-portfolio-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.1",
+    "nodemailer": "^6.9.7",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
