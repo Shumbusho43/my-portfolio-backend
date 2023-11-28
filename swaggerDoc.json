@@ -227,6 +227,41 @@
         }
       }
     },
+    "/api/v1/project/image/{id}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/api/v1/contactMe": {
       "post": {
         "description": "",
@@ -289,12 +324,12 @@
         }
       }
     },
-    "/api/v1/resume/download/{resumeId}": {
+    "/api/v1/resume/{id}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "resumeId",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -306,9 +341,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }

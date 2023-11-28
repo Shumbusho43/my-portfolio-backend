@@ -1,4 +1,5 @@
 const express=require("express");
+const fileUpload=require("express-fileupload")
 const cors=require("cors");
 const swaggerFile = require('./swaggerDoc.json')
 const swaggerUi = require("swagger-ui-express");
@@ -14,6 +15,7 @@ const app=express()
 app.use(express.json())
 //cors
 app.use(cors());
+app.use(fileUpload({useTempFiles : true}));
 //routes
 app.use("/", UserRoutes);
 app.use("/",Project)

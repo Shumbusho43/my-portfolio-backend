@@ -2,15 +2,11 @@ const mongoose = require('mongoose');
 
 // Define the Resume Schema
 const resumeSchema = new mongoose.Schema({
-  fileName: {
+  image: {
     type: String,
     required: true,
   },
-  data: {
-    type: Buffer,
-    required: true,
-  },
-  contentType: {
+  cloudinary_id: {
     type: String,
     required: true,
   },

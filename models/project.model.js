@@ -14,11 +14,20 @@ const projectSchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
+  image: {
+    type: String,
+    default: null
+},
+cloudinary_id: {
+    type: String,
+    default: null
+},
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
+
 // Create the Project Model
 const Project = mongoose.model('Projects', projectSchema);
 
