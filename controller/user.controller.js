@@ -8,6 +8,16 @@ exports.createUser = async (req, res, next) => {
             email,
             password
         } = req.body;
+        const emailExists=await User.findOne({
+            email
+        })
+        if(emailExists){
+            return res.status(400).json({
+                success:false,
+                status:400,
+                message:"email exists"
+            })
+        }
         const user = await new User({
             email,
             password
