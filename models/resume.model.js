@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 
 // Define the Resume Schema
 const resumeSchema = new mongoose.Schema({
-  image: {
+  fileName: {
     type: String,
     required: true,
   },
-  cloudinary_id: {
+  data: {
+    type: Buffer,
+    required: true,
+  },
+  contentType: {
     type: String,
     required: true,
   },
@@ -18,5 +22,4 @@ const resumeSchema = new mongoose.Schema({
 
 // Create the Resume Model
 const Resume = mongoose.model('Resume', resumeSchema);
-
 module.exports.Resume = Resume;
