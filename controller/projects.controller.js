@@ -5,13 +5,15 @@ const path=require("path");
     const {
         title,
         description,
-        technologies
+        technologies,
+        link
     }=req.body
     try{
    const newProj=new Project({
     title,
     description,
-    technologies
+    technologies,
+    link
    })
    await newProj.save()
    return res.status(201).json({

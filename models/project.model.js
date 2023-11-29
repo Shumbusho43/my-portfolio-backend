@@ -18,6 +18,10 @@ const projectSchema = new mongoose.Schema({
     type: String,
     default: null
 },
+link:{
+  type: String,
+  required: true
+},
 cloudinary_id: {
     type: String,
     default: null
