@@ -6,14 +6,14 @@ const path=require("path");
         title,
         description,
         technologies,
-        link
+        Link
     }=req.body
     try{
    const newProj=new Project({
     title,
     description,
     technologies,
-    link
+    Link
    })
    await newProj.save()
    return res.status(201).json({
