@@ -24,10 +24,6 @@ app.use("/",Resume)
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(swaggerFile, false, {
     docExpansion: "none"
 }))
-app.get("/testing-pipelines",(req,res)=>{;
-    res.json({message:"Heyyy, I am testing pipelines"})
-})
-
 app.listen(port,()=>{
     console.log("App running on port "+port);
 })
