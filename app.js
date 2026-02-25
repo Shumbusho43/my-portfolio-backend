@@ -8,7 +8,7 @@ const { dbConnection } = require("./models/db");
 const { UserRoutes } = require("./routes/user.routes");
 const { Project } = require("./routes/project.routes");
 const { contactMe } = require("./routes/contactMe.route");
-const { Resume } = require("./routes/resume.routes");
+const { Resume } = require("./routes/resume.route");
 dotenv.config()
 const port=process.env.PORT || 3000
 const app=express()
