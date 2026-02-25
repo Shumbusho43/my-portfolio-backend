@@ -42,4 +42,4 @@ jobs:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         EMAIL_SERVICE: ${{ secrets.EMAIL_SERVICE }}
       run: |
-        timeout 10s node app.js
+        timeout 10s node app.js || [ $? -eq 124 ]
