@@ -6,7 +6,7 @@ const swaggerUi = require("swagger-ui-express");
 const dotenv=require("dotenv");
 const { dbConnection } = require("./models/db");
 const { UserRoutes } = require("./routes/user.routes");
-const { Project } = require("./routes/project.route");
+const { Project } = require("./routes/project.routes");
 const { contactMe } = require("./routes/contactMe.route");
 const { Resume } = require("./routes/resume.routes");
 dotenv.config()
