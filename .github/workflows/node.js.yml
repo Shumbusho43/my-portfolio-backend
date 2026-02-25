@@ -30,5 +30,16 @@ jobs:
       run: node -c app.js
 
     - name: Start app (smoke test)
+      env:
+        PORT: ${{ secrets.PORT }}
+        MONGO_URI: ${{ secrets.MONGO_URI }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        JWT_EXPIRES_IN: ${{ secrets.JWT_EXPIRES_IN }}
+        CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+        CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+        CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        EMAIL_SERVICE: ${{ secrets.EMAIL_SERVICE }}
       run: |
         node app.js
