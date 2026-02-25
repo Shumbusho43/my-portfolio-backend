@@ -31,5 +31,4 @@ jobs:
 
     - name: Start app (smoke test)
       run: |
-        node app.js &
-        sleep 5
+        node app.js
